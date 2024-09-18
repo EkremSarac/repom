@@ -1,103 +1,112 @@
 <!DOCTYPE html>
-<html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OnlyJS Ödev</title>
-    <link rel="stylesheet" href="style.css" />
-    <!-- Ödevi tarayıcınızda görüntüleyebilĞmek için Live Server'ı başlatmalısınız -->
-  </head>
-  <body>
-    <h1>CSS Haftalık Ödev</h1>
-    <h2>1. Görev</h2>
-    <p>
-      Listenin üçüncü elemanının "üçüncü" yazısı,
-      <span class="same-color-text">liste elemanıyla aynı renkte</span> olmalı
-      ama renk kodu kullanarak yapılmamalı. Bu listenin HTML kodu üzerinde
-      değişiklik yapılmayıp sadece "style.css" dosyası ile ayarlanmalı.<br />
-      <small>
-        (Burada CSS'te specificity (keskin belirtme) ve inheritance (miras
-        bırakma) özelliklerinin ikisini birden kullanmamız gerekiyor)
-      </small>
-    </p>
-    <ul class="task-1-list">
-      <li>Listenin <span>ilk</span> elemanı</li>
-      <li>Listenin <span>ikinci</span> elemanı</li>
-      <li id="third-item">Listenin <span>üçüncü</span> elemanı</li>
-      <li>Listenin <span>dördüncü</span> elemanı</li>
-      <li>Listenin <span>beşinci</span> elemanı</li>
-    </ul>
-    <br />
-    <h2>2. Görev</h2>
-    <p>
-      CSS'te inheritance için kullanılan değerleri bu yazının altındaki "ul"
-      listesinin içerisinde listeleyip ne işe yaradıklarını açıklayalım.
-      ("değer" derken kastettiğimiz mesela "width: 200px" tanımındaki "200px"
-      kısmı)
-    </p>
-    <p>
-      4 adet değer yazabiliriz. Videolarda anlatılan üç değer haricinde bir
-      değer daha var, onu da listeye ekleyelim.
-      <br />
-      <small>("css inheritance" şeklinde Google'dan arama yapabiliriz)</small>
-    </p>
-    <!-- Buraya listeleyelim: -->
-    <ul>
-      <li>inherit= tüm özellikleri miras bırakır</li>
-      <li>initial= özellikler başlangıçta verilen default değerlerden gelir</li>
-      <li>unset= özellik varsa üstteki değer yok ise başlangıç değerini alır</li>
-      <li>revert= developer in değerlerini geri alır</li>
-    </ul>
-    <br />
-    <h2>3. Görev</h2>
-    <ol>
-      <li>
-        600 piksel genişliği ve 400 piksel yüksekliği olan, arkaplan rengi
-        #F4EEE0 olan, 3 piksellik mavi renkte kenarlığı olan bir "div"
-        oluşturalım
-      </li>
-      <li>
-        Hemen altına 50 piksel dışarıdan aralık bırakarak %30 genişlikte ve
-        300px yükseklikte olan, yine aynı kenarlık ve arkaplan rengine sahip bir
-        div oluşturalım
-      </li>
-      <li>
-        İki div'e de ana elementin (root element) font büyüklüğünün 1.5 katı
-        kadar içeriden boşluk verelim ama sol taraftan verdiğimiz boşluklar özel
-        olarak ana elementin font büyüklüğünün 2 katı olsun
-      </li>
-      <li>
-        Bu boşluğu verdikten sonra div'in boyutları sabit kalsın, boşluk
-        verdiğimiz için dışarıya doğru büyümesin. Bunu kolayca yapmamızı
-        sağlayan, tüm elementlere evrensel bir şekilde etki eden özel css
-        kodumuzu yazalım
-      </li>
-      <li>
-        İçlerine arkaplanı #E1CDA3 renginde olan, 100% genişlik ve yükseklikte
-        olan birer div koyalım
-      </li>
-      <li>Dıştaki div'lerin kenarlıklarına 25 piksellik yuvarlatma yapalım</li>
-      <li>
-        Aynı kodları farklı farklı elementler için tekrar tekrar kullanıyorsak o
-        kodları tek bir class'a taşıyalım ve o elementlerde ortak bir şekilde
-        kullanalım. Ufak tefek farklılıklar varsa o kodları o elemente farklı
-        bir şekilde (farklı bir classla veya id kullanarak vs.) verelim
-      </li>
-    </ol>
-    <p>Elde etmek istediğimiz görünüme örnek:</p>
-    <img src="task3-example.png" alt="Örnek" width="600px" />
-    <br />
-    <small>
-      *Alttaki kutu 30% genişlikte olduğu için ekran boyutuna göre değişiklik
-      gösterir.
-    </small>
-    <!-- 3. görevin çözümünü burada yapabiliriz -->
-     <div class="div-ilk ortak">
-      <div class="ic"></div>
-     </div>
-     <div class="div-iki ortak">
-      <div class="ic"></div>
-     </div>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelancer - Start Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="anasayfa">
+    <header>
+        <nav class="navbar navbar-expand-lg nav-bg py-4">
+            <div class="container">
+              <a class="navbar-brand text-white fw-semibold fs-3" href="#anasayfa">START BOOTSTRAP</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                  <a class="nav-link text-white fw-bold" href="#portfolio">PORTFOLIO</a>
+                  <a class="nav-link text-white fw-bold" href="#about">ABOUT</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <div class="avatar-container pt-5 pb-5">
+        <div class="container">
+            <div class="img-container d-flex justify-content-center pt-5 pb-5">
+                <img src="https://demo.onlyjs.com/exercises/bootstrap-layout/assets/img/avataaars.svg" alt="" width="200px" class="img-fluid">
+            </div>
+            <div class="baslik text-white text-center">
+                <h1 class="display-4 fw-bold ">START BOOTSTRAP</h1>
+                <p class="fs-5 fw-bolder pt-2">Graphic Artist - Web Designer - Illustrator</p>
+            </div>
+        </div>
+    </div>
+    <div class="container-portfolio py-4">
+        <div class="container">
+            <h2 class="text-center page-section-heading fw-semibold fs-1 py-4" id="portfolio">PORTFOLIO</h2>
+        <div class="row pb-5">
+            <div class="col-lg-4 mb-4">
+                <img src="https://demo.onlyjs.com/exercises/bootstrap-layout/assets/img/portfolio/cabin.png" alt="" class="img-fluid rounded-3">
+            </div>
+            <div class="col-lg-4 mb-5">
+                <img src="https://demo.onlyjs.com/exercises/bootstrap-layout/assets/img/portfolio/cake.png" alt="" class="img-fluid rounded-3">
+            </div>
+            <div class="col-lg-4 mb-4">
+                <img src="https://demo.onlyjs.com/exercises/bootstrap-layout/assets/img/portfolio/circus.png" alt="" class="img-fluid rounded-3">
+            </div>
+            <div class="col-lg-4 mb-4">
+                <img src="https://demo.onlyjs.com/exercises/bootstrap-layout/assets/img/portfolio/game.png" alt="" class="img-fluid rounded-3">
+            </div>
+            <div class="col-lg-4 mb-4">
+                <img src="https://demo.onlyjs.com/exercises/bootstrap-layout/assets/img/portfolio/safe.png" alt="" class="img-fluid rounded-3">
+            </div>
+            <div class="col-lg-4 mb-4">
+                <img src="https://demo.onlyjs.com/exercises/bootstrap-layout/assets/img/portfolio/submarine.png" alt="" class="img-fluid rounded-3">
+            </div>
+        </div>
+    </div>
+<section  class="about-container py-5">
+    <div class="container">
+        <h2 class="text-center text-white display-4 fw-semibold py-5" id="about">ABOUT</h2>
+        <div class="row justify-content-center text-white pt-4 fw-semibold fs-5">
+            <div class="col-lg-4">
+                Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.
+            </div>
+            <div class="col-lg-4">
+                You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!          
+            </div>
+            <div class="text-center mt-5 mb-5">
+                <a class="btn btn-xl btn-outline-light" href="https://startbootstrap.com/theme/freelancer/">
+                    Free Download!
+                </a>
+            </div> 
+            
+        </div>
+        
+        
+</section>
+            
+
+<footer class="footer-container py-5">
+    <div class="container">
+        <div class="row text-white py-5">
+            <div class="col-lg-4 text-center">
+                <h5 class="text-white fs-3 mb-4">LOCATION</h5>
+                <p class="fs-5">2215 John Daniel Drive <br>
+                    Clark, MO 65243</p>
+            </div>
+            <div class="col-lg-4 text-center">
+                <h5 class="text-white fs-3 mb-4">AROUND THE WEB</h5>
+                <p class="fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, ipsum!</p>
+            </div>
+            <div class="col-lg-4 text-center">
+                <h5 class="fs-3 mb-4">About Freelancer</h5>
+                <p class="fs-5">Freelancer is a free to use, MIT licensed Bootstrap theme created by <a href="https://startbootstrap.com/theme/freelancer">Start Bootstrap .</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="copyright py-4 text-center mt-auto">
+    <div class="container text-white">
+        <small>Copyright © EkremSaraç 2024</small>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
 </html>
