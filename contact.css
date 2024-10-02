@@ -2,28 +2,14 @@
     background-color: rgb(33, 36, 41);
 }
 
-
 a{
     color: rgb(155, 157, 158) !important;
     margin-right: 10px;
 }
 
-.introduce-container{
-    background-color: rgb(33, 36, 41);
-}
-
-
-.ilk-paragraf{
-    color: rgb(155, 157, 158);
-}
-
-.pizza{
-    border-radius: 10px;
-    width: 600px;
-    height: 400px;
-}
-
 i{
+    display: inline;
+    color: white;
     background-color: rgb(45, 142, 227);
     padding: 10px 15px;
     border-radius: 10px;
@@ -33,11 +19,7 @@ i{
     background-color: rgb(33, 36, 41);
 }
 
-
 .nav-bg .nav-link:hover {
     color: #fff !important;
     transition: color 0.3s ease !important;
 }
-
-
-
